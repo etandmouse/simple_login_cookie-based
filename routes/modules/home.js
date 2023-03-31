@@ -10,9 +10,9 @@ router.get('/', (req, res) => {
 router.post('/login', (req, res) => {
   const email = req.body.email
   const password = req.body.password
-  const firstname = checkPassword(email, password)
-  if (firstname) {
-    res.render('success', { firstname })
+  const firstName = checkPassword(email, password)
+  if (firstName) {
+    res.render('success', { firstName })
   } else {
     res.render('error')
   }
